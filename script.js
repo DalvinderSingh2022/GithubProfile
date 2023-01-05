@@ -141,7 +141,6 @@ const loadRecent = () => {
         let recentHTMl = "";
         recentHTMl += `<div class="recent my-2 px-5  d-flex justify-content-evenly flex-wrap ">`;
         recentSearch.forEach(recent => {
-            console.log(recent)
             if (recent) {
                 recentHTMl += `
                 <div class="d-flex justify-content-start card shadow-lg bg-dark m-0 mb-4" style="min-width: 220px;max-width: 220px;">
@@ -167,7 +166,7 @@ window.addEventListener("DOMContentLoaded", () => {
     searchForm.addEventListener("submit", (event) => {
         event.preventDefault();
         const search = searchInput.value;
-        renderdata(gitHubLogin);
+        renderdata(search);
     });
     loadRecent();
 });
